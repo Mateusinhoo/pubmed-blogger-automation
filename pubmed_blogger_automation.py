@@ -141,7 +141,7 @@ def generate_summary(paper_details):
     
     try:
         response = openai.ChatCompletion.create(
-            model=OPENAI_MODEL,
+            model="gpt-3.5-turbo",  # Use this instead of "gpt-4" for now
             messages=[
                 {"role": "system", "content": "You are a skilled medical writer who explains complex research in simple terms."},
                 {"role": "user", "content": prompt}
