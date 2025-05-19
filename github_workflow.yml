@@ -33,13 +33,3 @@ jobs:
           BLOGGER_API_KEY: ${{ secrets.BLOGGER_API_KEY }}
           BLOGGER_BLOG_ID: ${{ secrets.BLOGGER_BLOG_ID }}
         run: python pubmed_blogger_automation.py
-        
-      - name: Commit and push if there are changes
-        run: |
-          git config --global user.name 'GitHub Actions Bot'
-          git config --global user.email 'actions@github.com'
-          git add . || true
-          git diff --quiet && git diff --staged --quiet || git commit -m "Add latest blog post" || true
-          git push || true
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
