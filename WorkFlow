@@ -1,4 +1,3 @@
-.github/workflows/daily_pubmed.yml
 name: Daily PubMed Blog Post
 
 on:
