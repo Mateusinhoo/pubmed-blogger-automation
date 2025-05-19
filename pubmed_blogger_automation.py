@@ -235,10 +235,6 @@ def main():
     # 5. Post to Blogger
     success = post_to_blogger(blog_post, paper_details)
     
-    # 6. Save a local copy for reference
-    with open("latest_blog_post.md", "w") as f:
-        f.write(blog_post)
-    
     if success:
         print("Automation completed successfully")
     else:
