@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests openai google-api-python-client google-auth-oauthlib
+          pip install requests openai==0.28 google-api-python-client google-auth-oauthlib
           
       - name: Run PubMed to Blogger script
         env:
